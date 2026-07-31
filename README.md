@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:14331f,100:0D1117&height=200&section=header&text=%3E_%20C%20Compiler%20Error%20Explainer&fontSize=38&fontColor=00FF41&fontAlignY=42&animation=fadeIn&desc=compile()%20%E2%86%92%20parse()%20%E2%86%92%20explain()&descAlignY=62&descAlign=50&descColor=63D9C7&fontFamily=Fira+Code" width="100%" alt="C Compiler Error Explainer banner" />
+</p>
+
+<p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&pause=1000&color=00FF41&background=0D1117&center=true&vCenter=true&width=800&height=60&lines=%24+START_HERE.bat" alt="terminal prompt" />
 </p>
 
