@@ -1,0 +1,6 @@
+*.exe binary
+*.dll binary
+*.a binary
+*.o binary
+*.dll.a binary
+*.s binary

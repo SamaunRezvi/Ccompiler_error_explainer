@@ -9,10 +9,11 @@ A VS Code-ready C project that compiles a `.c` file with GCC, captures compiler 
 - Includes VS Code build, run, test, and debug tasks.
 - Works with paths containing spaces.
 - Uses English-only console output and source comments.
+- Ships with its own compiler in `tools/mingw/` — nothing to install. Download this repository as a zip, unzip it, and run `START_HERE.bat`.
 
 ## Fastest Way to Run on Windows
 
-Open the project folder in VS Code, then run:
+No install step: download this repository (as a zip, or `git clone`), open the folder in VS Code, then run:
 
 ```powershell
 .\START_HERE.bat
@@ -67,6 +68,7 @@ src/          C source and header files
 scripts/      PowerShell build and run scripts
 playground/   File used for normal testing
 examples/     Sample correct and incorrect C programs
+tools/mingw/  Bundled compiler (used automatically; no install needed)
 .vscode/      VS Code tasks, settings, and debugger configuration
 bin/          Generated Windows executables
 ```

@@ -5,3 +5,4 @@ bin/error-explainer
 .error_explainer_build.exe
 .error_explainer_diagnostics.txt
 *.o
+!tools/**

@@ -6,12 +6,31 @@ function Invoke-CCompilation {
 
     $tempBinary = Join-Path $env:TEMP ("aicee_" + [guid]::NewGuid().ToString("N") + ".exe")
     $diagFile = Join-Path $env:TEMP ("aicee_" + [guid]::NewGuid().ToString("N") + ".txt")
+    $batchFile = Join-Path $env:TEMP ("aicee_" + [guid]::NewGuid().ToString("N") + ".bat")
+    $gccBinDir = Split-Path -Parent $Gcc
 
-    # Routed through cmd /c so native stderr is captured to a file instead of
-    # PowerShell converting it into terminating ErrorRecords under -Stop.
-    $command = "$Gcc -std=c11 -Wall -Wextra -Wpedantic -fdiagnostics-color=never `"$SourcePath`" -o `"$tempBinary`" 2> `"$diagFile`""
-    cmd /c $command
+    # Written to a real .bat file and executed directly instead of passing a
+    # quoted command string through cmd /c: once any path here (gcc, source,
+    # temp files) contains a space, nesting that many quoted arguments inside
+    # one command-line string makes cmd.exe's own quote-stripping rules mangle
+    # it. A batch file with plain, literal quoting has no such ambiguity, and
+    # running .bat file as a native call also keeps stderr out of PowerShell's
+    # own ErrorRecord conversion.
+    #
+    # gcc invokes its assembler ("as") and linker helper by bare name, not by
+    # absolute path, so it relies on PATH to find them. Prepending the
+    # compiler's own bin folder here (scoped to just this one batch process)
+    # guarantees that resolves correctly even when the bundled compiler is
+    # the only one on the machine and nothing else has put it on PATH.
+    @"
+@echo off
+set PATH=$gccBinDir;%PATH%
+"$Gcc" -std=c11 -Wall -Wextra -Wpedantic -fdiagnostics-color=never "$SourcePath" -o "$tempBinary" 2> "$diagFile"
+"@ | Set-Content -Path $batchFile -Encoding ASCII
+
+    & $batchFile
     $exitCode = $LASTEXITCODE
+    Remove-Item -Path $batchFile -Force -ErrorAction SilentlyContinue
 
     $diagnostics = ""
     if (Test-Path $diagFile) {
