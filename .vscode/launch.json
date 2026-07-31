@@ -1,0 +1,46 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Explainer with Playground",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}\\bin\\error-explainer.exe",
+      "args": [
+        "${workspaceFolder}\\playground\\user_code.c",
+        "--offline"
+      ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "${config:compilerExplainer.gdbPath}",
+      "preLaunchTask": "3. Build Offline Explainer",
+      "setupCommands": [
+        {
+          "description": "Enable GDB pretty-printing",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    },
+    {
+      "name": "Debug Explainer with Current C File",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}\\bin\\error-explainer.exe",
+      "args": [
+        "${file}",
+        "--offline"
+      ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "${config:compilerExplainer.gdbPath}",
+      "preLaunchTask": "3. Build Offline Explainer"
+    }
+  ]
+}
