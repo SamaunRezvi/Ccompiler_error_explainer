@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1b1e29,100:1c7c72&height=200&section=header&text=C%20Compiler%20Error%20Explainer&fontSize=42&fontColor=e7e9f2&animation=fadeIn&fontAlignY=38&desc=Compiles.%20Diagnoses.%20Explains.%20Fully%20Offline.&descAlignY=58&descAlign=50" width="100%" alt="C Compiler Error Explainer banner" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&pause=1000&color=00FF41&background=0D1117&center=true&vCenter=true&width=800&height=60&lines=%24+START_HERE.bat" alt="terminal prompt" />
 </p>
 
 <p align="center">
   <a href="#quick-start">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2600&pause=900&color=63D9C7&center=true&vCenter=true&width=650&lines=Turns+cryptic+GCC+errors+into+plain+English;Missing+semicolon%3F+Undeclared+variable%3F+Explained.;No+GCC+install+needed%2C+it+ships+bundled;100%25+Offline.+No+API+Key.+No+Server." alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=17&duration=1800&pause=700&color=00FF41&background=0D1117&center=true&vCenter=true&repeat=true&width=800&height=170&lines=%24+gcc+user_code.c;compiling...;error%3A+expected+%27%2C%27+or+%27%3B%27+before+%27printf%27;+++%5E~~~~~~;%3E+explained%3A+missing+semicolon+on+the+previous+line.;%3E+fix+applied.+recompiling...;compilation+successful." alt="terminal boot animation" />
   </a>
 </p>
 
@@ -14,6 +14,7 @@
   <img src="https://img.shields.io/badge/Compiler-Bundled-ffb454?style=for-the-badge&logo=gnu&logoColor=white" alt="Compiler bundled" />
   <img src="https://img.shields.io/badge/Setup-Zero%20Install-ff6b6b?style=for-the-badge&logo=windowsterminal&logoColor=white" alt="Zero install" />
   <img src="https://img.shields.io/badge/Network-Not%20Required-1b1e29?style=for-the-badge&logo=off&logoColor=white" alt="Fully offline" />
+  <img src="https://img.shields.io/badge/License-MIT-00FF41?style=for-the-badge&logo=github&logoColor=white" alt="License: MIT" />
 </p>
 
 <p align="center">
@@ -148,8 +149,14 @@ bin/          Generated Windows executable
 | `1` | Setup, input, or internal error (not a code problem) |
 | `2` | The target file contains a compiler error (expected analysis result) |
 
+## License
+
+Licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute this
+project, including commercially, as long as the original copyright notice below is kept
+intact in any copy or substantial portion of the code.
+
 ---
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1c7c72,100:1b1e29&height=100&section=footer" width="100%" alt="footer" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=15&pause=2000&color=2E3346&background=0D1117&center=true&vCenter=true&width=700&height=40&lines=%C2%A9+2026+Samaun+Rezvi.+Licensed+under+the+MIT+License." alt="copyright" />
 </p>
